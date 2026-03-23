@@ -14,7 +14,7 @@ export default function Home() {
     router.push(`/room/${id}`)
   }
 
-  const joinRoom = (e) => {
+    const joinRoom = (e: { preventDefault: () => void }) => { 
     e.preventDefault()
     const id = roomInput.trim()
     if (!id) return
